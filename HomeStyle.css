@@ -1,0 +1,202 @@
+*{
+    margin: 0px;
+    padding: 0px;
+ }
+
+
+
+ #mDiv{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(45deg,rgb(232, 232, 232),black);
+ 
+ 
+ }
+ 
+ 
+ #favouritePage{
+        position: absolute;
+        padding: 5px 10px;
+        background-image: linear-gradient(yellow,white);
+        color: black;
+        /* border: none; */
+        border-radius: 5px;
+        cursor: pointer;
+        left: 80%;
+        top: 8%;
+        font-style:italic;
+    
+ }
+ 
+ 
+ #personDetails{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+ }
+ 
+ 
+ #personDetails{
+    
+ }
+ #user{
+    position: absolute;
+    font-size: 30px;
+    left: 95%;
+    top: 15%;
+    color: black;
+ }
+ 
+ 
+ #title{
+    position: absolute;
+    /* display: inline; */
+    margin: 10px;
+    margin-top: 60px;
+    color: aliceblue;
+    
+    box-shadow: 1px 1px 20px 10px #595bff;
+    /* background-color: rgb(100, 98, 98); */
+    border: 1px dotted black;
+    cursor: pointer;
+    
+ }
+ h1{
+    position: relative;
+    font-size: 3.5rem;
+    font-family: cursive;
+    padding: 5px;
+    animation: changeShape 4s ease-in-out alternate infinite;
+    /* bottom: 30px;
+    right: 18px; */
+ }
+ 
+ 
+ @keyframes changeShape{
+    0%{
+        color: aliceblue;
+        /* transform: translateX(32px); */
+        transform: rotateY(360deg);
+ 
+ 
+    }
+    25%{
+        color: red;
+        /* transform: translateY(30px); */
+    }
+    50%{
+        color: green;
+        /* transform: translateZ(-30px); */
+    }
+    75%{
+        color: yellow;
+        /* transform: translateX(10px, 10px); */
+    }
+    100%{
+        color: aliceblue;
+        /* transform: translateY(10px, 10px); */
+    }
+ }
+ 
+ 
+ #searchDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ }
+ 
+ 
+ #movieName{
+    position: absolute;
+    height: 20px;
+    width: 600px;
+    top: 15%;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+ }
+ 
+ 
+ #mainDiv{
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    top: 23%;
+    left: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: white; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+ }
+ 
+ 
+ #mainDiv div{
+    height: 430px;
+    width: 300px;
+    /* background-color: black; */
+    margin: 20px;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, black,white);
+    border-radius: 2%;
+ }
+ 
+ 
+ #mainDiv div:hover{
+    /* height: 450px;
+    width: 320px; */
+    /* border: 2px solid #0a1aef; */
+    transform: scale(1.1);
+    transition: all 0.5s ease-in;
+    margin: 5px;
+    box-shadow: 10px 10px 70px 40px #5759b4;
+ }
+ 
+ 
+ 
+ 
+ #mainDiv img{
+    position: relative;
+    height: 81%;
+    width: 90%;
+    /* object-fit: cover ; */
+    /* right: 5px; */
+    top: 10px;
+    
+ }
+ 
+ 
+ #mainDiv h4{
+    display: flex;
+    position: relative;
+    top: 10px;
+    color: white;
+    left: 10px;
+ }
+ #mainDiv h5{
+    display: flex;
+    position: relative;
+    color: white;
+    top: 13px;
+    left: 10px;
+ }
+ 
+ 
+ .bookMark{
+    position: relative;
+    left: 125px;
+    color: pink;
+    cursor: pointer;
+ }
+ 
+ 
+ .bookMark:hover{
+    color: red;
+ }
