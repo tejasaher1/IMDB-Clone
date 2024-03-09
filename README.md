@@ -1,1 +1,1 @@
-IMDB_Clone project is use to show IMDB rating for perticular movie.This project fetch the the API https://www.omdbapi.com/ and show the search result.
+In IMDB_Clone project you can search any movie like Bollywood, Hollywood etc. and clicking on perticular movie it show details about movie like name, photo, plot and IMDB rating etc. On search for movie this project fetch the API https://www.omdbapi.com/ and show the search result. In this project we can add perticular movie to favourite movie cart and it will store in local storage. 
