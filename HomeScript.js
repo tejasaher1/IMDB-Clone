@@ -4,7 +4,7 @@
 var arrayInfoDivs = [];
 var favArray = [];
 
-
+//Comment
 function saveListItems(favArray) {
    // localStorage.setItem("myFavItems", favArray);
    var htmlStrings = favArray.map(function(div) {

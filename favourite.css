@@ -108,6 +108,6 @@
  }
  
  
- .bookMark:hover{
+ #myFav div div .bookMark:hover{
     color: pink;
  }
