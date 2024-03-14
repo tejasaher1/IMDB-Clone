@@ -89,7 +89,7 @@ window.onload = function(){
             var tempDiv = document.createElement('div');
             tempDiv.innerHTML = htmlString;
             allFavDivArray.push(tempDiv);
-            myFavElement.append(tempDiv);
+            myFavElement.prepend(tempDiv);
         });
         // Append the child nodes of the temporary div to the desired location in the document
         // var myFavElement = document.getElementById('myFav');
@@ -105,7 +105,7 @@ window.onload = function(){
  // -------------------------------------------------------------------------------------------------------------
  
  
- 
+// If click then show more information about movie.
  
  function checkClick(){
     if(allFavDivArray.length > 0){

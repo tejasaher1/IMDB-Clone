@@ -4,7 +4,6 @@
 var arrayInfoDivs = [];
 var favArray = [];
 
-//Comment
 function saveListItems(favArray) {
    // localStorage.setItem("myFavItems", favArray);
    var htmlStrings = favArray.map(function(div) {
@@ -23,13 +22,14 @@ var favouriteMark =  document.getElementById('bookMark');
 var infoDives;
 var reloadOnTitleClick = document.querySelector('#title');
 
-
+// Clicking on logo, the site will reload.
 reloadOnTitleClick.addEventListener('click', function(event){
     location.reload();
 })
 
 // -------------------------------------------------------------------------------------------------------------
 
+// Adding movies after fetching data from API.
 function addSearchMovie(data){
    arrayInfoDivs = [];
    data.Search.forEach(movie => {
@@ -37,7 +37,7 @@ function addSearchMovie(data){
        var div = document.createElement('div');
        div.className = 'infoDive';
        div.id = movie.imdbID;
-       if(movie.Poster != 'N/A'){
+       if(movie.Poster != 'N/A'){       // Here we are checking movie poster is present for perticular movie
            div.innerHTML =  `
                                <img src="${movie.Poster}" alt="">
                                <h4> ${movie.Title} </h4>
@@ -45,7 +45,7 @@ function addSearchMovie(data){
                                <i class="bookMark fa-solid fa-shield-heart fa-xl" id="${movie.imdbID}"></i>
 
                                `
-       }else{
+       }else{    // If movie poster is not present then we use default poster.
            div.innerHTML =  `
                                <img src="/default-movie.jpg" alt="">
                                <h4> ${movie.Title} </h4>
@@ -54,16 +54,17 @@ function addSearchMovie(data){
                             `
        }
 
-       mainDiv.append(div);
+       mainDiv.append(div);     
        arrayInfoDivs.push(data.Search[0]);
    });
 }
 
 // -------------------------------------------------------------------------------------------------------------
 
-async function fetchData(typeInfo){
+// Fetching data from API.
+async function fetchData(typeInfo){   // typerInfo is a search result pass as a parameter to fetchData func.
    var fetching = await fetch(`https://www.omdbapi.com/?s=${typeInfo}&apikey=a61d3f5d`)
-   let data = await fetching.json();
+   let data = await fetching.json();     //Converting data into json format.
    mainDiv.innerHTML = "";
    if(data.Search){
        addSearchMovie(data);
@@ -93,24 +94,24 @@ async function fetchData(typeInfo){
 
 // -------------------------------------------------------------------------------------------------------------
 
+// This function is use to check 
 function checkClick(){
-   if(arrayInfoDivs.length > 0){
-       var infoDives = document.querySelectorAll('.infoDive');
-       for(let i=0; i<infoDives.length; i++){
-           infoDives[i].addEventListener('click', function(event){
-              if(!event.target.classList.contains('bookMark')){
+    if(arrayInfoDivs.length > 0){    //Checking is div is not empty
+        var infoDives = document.querySelectorAll('.infoDive');
+        for(let i=0; i<infoDives.length; i++){
+            infoDives[i].addEventListener('click', function(event){
+                if(!event.target.classList.contains('bookMark')){
                    var childDiv = event.target.closest('.infoDive');
                    if (childDiv) {
                        var childDivId = childDiv.id;
-                       var dataToSend = {
+                       var dataToSend = {    //Creating a object for storing information
                            key1: childDivId
                        }
                        var queryString = Object.keys(dataToSend).map(key => key + '=' + encodeURIComponent(dataToSend[key])).join('&');
                        window.location.href = 'info.html?' + queryString;
-               }
-
-              }else{
-                   favourite(event);
+                    }   
+                }else{
+                   favourite(event);    //If click is bookmark
               }
            });
        }
@@ -161,7 +162,7 @@ function favourite(event){
 // -------------------------------------------------------------------------------------------------------------
 
 function startApp(){
-   typeData.addEventListener('input', (e) => {
+   typeData.addEventListener('input', (e) => {     //Here we get the keystroke on every click
        fetchData(typeData.value);
    });
 }

@@ -32,6 +32,7 @@ async function fatchInfoUsingMoviID(){
    console.log(movidata);
    createImageInfo();
    createPrimeInfo();
+   searchVideos();
 }
 
 function createImageInfo(){
@@ -91,14 +92,43 @@ function createPrimeInfo(){
 }
 
 
+
+//------------------------------------------------------------------------------------
+
+// Additional features include showing a trailer for a particular movie using the YouTube API.
+
+
+// function searchVideos() {
+//    var searchQuery = movidata.Title;
+//    var apiKey = "AIzaSyAxWElDwxD1D0Bm4Zrn9f4ve3tA-eyUS90"; // Replace with your own API key
+//    var trailer = " Trailer";
+//    var url = "https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&q=" + searchQuery  + trailer  + "&part=snippet&type=video";
+//    console.log(url);
+//    fetch(url)
+//    .then(response => response.json())
+//    .then(data => {
+//        var videoId = data.items[0].id.videoId; // Get the videoId of the first video
+//        embedVideo(videoId);
+//        console.log(videoId);
+//    })
+//    .catch(error => console.error('Error:', error));
+// }
+
+// function embedVideo(videoId) {
+//    var playerDiv = document.getElementById("player");
+//    playerDiv.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+// }
+
+
+//------------------------------------------------------------------------------------
+
+
 if(moviID){
    fatchInfoUsingMoviID();
 }
 
-// -------------------------------------------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------------------------
+
+
 // -------------------------------------------------------------------------------------------------------------
 
                                  // --- End --- \\
