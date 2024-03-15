@@ -47,7 +47,7 @@ function addSearchMovie(data){
                                `
        }else{    // If movie poster is not present then we use default poster.
            div.innerHTML =  `
-                               <img src="/default-movie.jpg" alt="">
+                               <img src="https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg" alt="">
                                <h4> ${movie.Title} </h4>
                                <h5> ${movie.Year} </h5>  
                                <i class="bookMark fa-solid fa-shield-heart fa-xl" id="${movie.imdbID}"></i>
