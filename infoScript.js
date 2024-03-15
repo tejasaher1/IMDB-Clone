@@ -27,7 +27,7 @@ var BoxOffice = document.getElementById('boxOffice');
 
 // Fetching Information from API -
 async function fatchInfoUsingMoviID(){
-   var data = await fetch(`http://www.omdbapi.com/?i=${moviID}&apikey=a61d3f5d`);
+   var data = await fetch(`https://www.omdbapi.com/?i=${moviID}&apikey=a61d3f5d`);
    movidata = await data.json();
    console.log(movidata);
    createImageInfo();
