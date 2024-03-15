@@ -23,7 +23,7 @@ var releaseDatas = document.getElementById('releaseData');
 var BoxOffice = document.getElementById('boxOffice');
 
 // -------------------------------------------------------------------------------------------------------------
-
+   
 
 // Fetching Information from API -
 async function fatchInfoUsingMoviID(){
