@@ -32,7 +32,7 @@ async function fatchInfoUsingMoviID(){
    console.log(movidata);
    createImageInfo();
    createPrimeInfo();
-   searchVideos();
+   // searchVideos();
 }
 
 function createImageInfo(){
